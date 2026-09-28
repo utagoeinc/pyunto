@@ -1,0 +1,5 @@
+Contact: https://github.com/utagoeinc/pyunto/security/advisories/new
+Expires: 2027-09-28T00:00:00.000Z
+Preferred-Languages: en, ja
+Canonical: https://pyunto.com/.well-known/security.txt
+Policy: https://pyunto.com/encryption.html#report

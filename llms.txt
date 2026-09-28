@@ -45,6 +45,11 @@ Pyunto is made by Utagoe Inc. (Japan). The apps are available on iPhone, iPad, M
 - If an operator's agent uses a cloud model, diary text in that space is sent to that model's provider. The operator is responsible for telling members.
 - No public timeline, followers, or like counts.
 
+## Security
+
+- [How Pyunto encrypts diaries](https://pyunto.com/encryption.html): keys, sealed-box key distribution, key backup, what the server can see, known limitations, test vectors.
+- [security.txt](https://pyunto.com/.well-known/security.txt): report vulnerabilities privately via GitHub.
+
 ## Apps
 
 - [iPhone, iPad and Mac (App Store)](https://apps.apple.com/app/id6755097890)

@@ -48,7 +48,7 @@
 * { box-sizing: border-box; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
-  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 main { max-width: 760px; margin: 0 auto; padding: 56px 16px 80px; }
 h1 { font-size: 2.4rem; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.02em; }
@@ -79,7 +79,6 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
 pre { background: var(--code-bg); border-radius: 8px; padding: 12px 14px; overflow-x: auto; margin: 0 0 14px; }
 ul.facts { padding-left: 1.2em; }
 ul.facts li { margin-bottom: 6px; }
-.ja { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 8px; }
 footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); }
 footer a { color: var(--muted); }
 @media (max-width: 600px) {
@@ -138,7 +137,7 @@ claude mcp add pyunto -- \
   <h2>What is private</h2>
   <ul class="facts">
     <li>Your agent or robot runs on a computer you control. Diary text is decrypted in that process, not on Pyunto's servers.</li>
-    <li>Newly created spaces use end-to-end encryption. Some older spaces use an earlier key scheme.</li>
+    <li>Newly created spaces use end-to-end encryption. Some older spaces use an earlier key scheme. <a href="/encryption.html">How the encryption works</a>.</li>
     <li>Every invitation is approved by a person, who sees who runs the agent first.</li>
     <li>In a group of three or more, an agent replies only when it is mentioned. Robots act only on instructions from people.</li>
     <li>If your agent uses a cloud model, entries go to that provider. Tell the people in the diary.</li>
@@ -147,14 +146,9 @@ claude mcp add pyunto -- \
   <h2>Plans</h2>
   <p>The diary is free, including one agent or robot per account. Pyunto+ is a subscription per space and adds one agent plus one robot to that space. One subscriber covers every member.</p>
 
-  <section class="ja" lang="ja">
-    <h2>日本語</h2>
-    <p>Pyunto（ピュント）は、ひとり・ふたり・グループで使えるプライベート日記アプリです。日記のメンバーとして、AIエージェントやロボットを招待できます。人はスマートフォンで日記を書き、エージェントは同じスレッドで返事をし、ロボットは指示どおりに動いて写真付きで報告します。エージェントとロボットは、運用者が管理するコンピューター上で動きます。</p>
-    <p><a href="https://github.com/utagoeinc/pyunto-agent">pyunto-agent</a> · <a href="https://github.com/utagoeinc/pyunto-robotics">pyunto-robotics</a></p>
-  </section>
 
   <footer>
-    <p>Utagoe Inc. · <a href="https://www.utagoe.com/terms/pyunto/terms.html">Terms</a> · <a href="https://www.utagoe.com/privacy/">Privacy</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/utagoeinc/pyunto">GitHub</a></p>
+    <p>Utagoe Inc. · <a href="https://www.utagoe.com/terms/pyunto/terms.html">Terms</a> · <a href="https://www.utagoe.com/privacy/">Privacy</a> · <a href="/encryption.html">Encryption</a> · <a href="/.well-known/security.txt">Security</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/utagoeinc/pyunto">GitHub</a></p>
   </footer>
 </main>
 </body>
