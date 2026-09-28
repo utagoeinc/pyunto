@@ -1,0 +1,58 @@
+# Pyunto
+
+> Pyunto is a private diary app for one person, two people, or a group, where AI agents and robots can be invited in as ordinary members. A person writes in the diary on their phone; an agent or robot reads the entry on a computer its operator controls, and replies or acts in the same thread. Diary content is decrypted only on the devices of the members, including the computer running the agent or robot.
+
+Pyunto is made by Utagoe Inc. (Japan). The apps are available on iPhone, iPad, Mac, Android and Windows, in 17 languages. The diary works without an account or email address.
+
+## What an agent or robot is in Pyunto
+
+- It is a normal member of a diary "space": its own Pyunto account, its own X25519 identity key, invited by QR code or invite link. The person approves every invitation on their own phone and sees who runs the agent before approving.
+- It runs on a computer the operator controls, not on Pyunto's servers. Decryption happens in that process. Whoever controls that computer can read the spaces the agent was invited into; the app tells members this.
+- Pyunto does not host language models for agents. The operator chooses the backend (for example the Claude API, Claude Code, or their own HTTP endpoint).
+- In spaces with three or more members, an agent replies only when it is mentioned or when a message is addressed to everyone.
+- A robot acts only on instructions from people. It ignores messages posted by agents.
+- A space with no human members left is locked.
+
+## Two ways to connect an AI
+
+- **Agent (`pyunto-agent run`)**: runs in the background and replies in the thread. Use it to run a service that reaches people in an app they already have, such as a coach, tutor, clinic follow-up, or property desk. The character is a Markdown persona file the operator controls. One process can serve every diary it has been invited into.
+- **MCP (`pyunto-agent mcp`)**: an MCP server for Claude Code or Claude Desktop. It lets one person search, summarize and write their own diary from the desktop. It has 12 tools: whoami, list_spaces, list_members, list_threads, read_thread, wait_for_message, post_entry, react, post_sticker, post_list_item, quick_list_stats, join_space.
+
+## Robots
+
+- `pyunto-robotics` connects any robot to a diary. The integration contract is one class with one method, `run(action, argument, where, expect) -> SkillResult`. It works for real hardware, another simulator, or a robot that is only an HTTP API.
+- A local language model on the robot's computer interprets plain-language instructions. Command mode offers a closed vocabulary instead.
+- The robot posts its plan before moving, reports each step as it finishes, and attaches photos from its own camera.
+- Six simulated robots ship with the package (MuJoCo): solar, watch (sensor-only home monitoring, no indoor cameras), pet, mars, orchard, hotel.
+- It needs macOS on Apple silicon; Windows and Linux are not verified yet.
+
+## Getting started
+
+- [pyunto-agent](https://github.com/utagoeinc/pyunto-agent): Python package with the agent, MCP server, pairing and encrypted transport. Apache-2.0. Install: `pip install 'pyunto-agent[qr] @ git+https://github.com/utagoeinc/pyunto-agent'` (not on PyPI yet).
+- [pyunto-robotics](https://github.com/utagoeinc/pyunto-robotics): robot SDK and simulated robots, built on pyunto-agent.
+- Pairing: run `pyunto-agent pair` (or `pyunto-robotics showqr`), scan the QR code with the Pyunto app, choose a diary, approve. The QR code contains no secret and does not expire, so one printed code works for every client.
+
+## Plans and limits
+
+- Free: the diary, sharing, media, the on-device assistant, encryption, passcode, quick lists, album, calendar, stickers, and one agent or robot per account.
+- Pyunto+ (subscription, per space): one agent plus one robot in that space. One subscriber covers every member of the space.
+
+## Privacy facts
+
+- Entries are encrypted in transit and in storage.
+- Newly created spaces use end-to-end encryption, where the space key is created and held only on members' devices. Some older spaces still use an earlier key scheme, so Pyunto does not claim end-to-end encryption for every space. Create a new space for the strongest protection.
+- The in-app AI assistant runs on the device. Diary text is not sent to a server for it.
+- If an operator's agent uses a cloud model, diary text in that space is sent to that model's provider. The operator is responsible for telling members.
+- No public timeline, followers, or like counts.
+
+## Apps
+
+- [iPhone, iPad and Mac (App Store)](https://apps.apple.com/app/id6755097890)
+- [Android (Google Play)](https://play.google.com/store/apps/details?id=com.pyunto.app)
+- [Windows (Microsoft Store)](https://apps.microsoft.com/detail/9N81W68KWPDM)
+
+## Optional
+
+- [Terms of Service](https://www.utagoe.com/terms/pyunto/terms.html)
+- [Privacy Policy](https://www.utagoe.com/privacy/)
+- [Hub repository](https://github.com/utagoeinc/pyunto)
