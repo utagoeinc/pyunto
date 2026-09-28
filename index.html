@@ -113,7 +113,8 @@ footer a { color: var(--muted); }
     <div class="card">
       <h3>Agent: it answers your users</h3>
       <p>Runs in the background and replies in the diary. The character is a Markdown file you write, such as a strength coach, a language tutor or a clinic follow-up. One process serves every diary it has been invited into.</p>
-      <pre>pyunto-agent pair
+      <pre>pip install 'pyunto-agent[qr]'
+pyunto-agent pair
 pyunto-agent run --backend claude-api \
   --persona coach.md</pre>
     </div>

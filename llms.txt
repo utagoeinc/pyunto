@@ -28,7 +28,7 @@ Pyunto is made by Utagoe Inc. (Japan). The apps are available on iPhone, iPad, M
 
 ## Getting started
 
-- [pyunto-agent](https://github.com/utagoeinc/pyunto-agent): Python package with the agent, MCP server, pairing and encrypted transport. Apache-2.0. Install: `pip install 'pyunto-agent[qr] @ git+https://github.com/utagoeinc/pyunto-agent'` (not on PyPI yet).
+- [pyunto-agent](https://github.com/utagoeinc/pyunto-agent): Python package with the agent, MCP server, pairing and encrypted transport. Apache-2.0. Install: `pip install 'pyunto-agent[qr]'` ([PyPI](https://pypi.org/project/pyunto-agent/)).
 - [pyunto-robotics](https://github.com/utagoeinc/pyunto-robotics): robot SDK and simulated robots, built on pyunto-agent.
 - Pairing: run `pyunto-agent pair` (or `pyunto-robotics showqr`), scan the QR code with the Pyunto app, choose a diary, approve. The QR code contains no secret and does not expire, so one printed code works for every client.
 
