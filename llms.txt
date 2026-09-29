@@ -28,6 +28,7 @@ Pyunto is made by Utagoe Inc. (Japan). The apps are available on iPhone, iPad, M
 
 ## Demo
 
+- [Video: an AI agent answering a client's training log (90 s)](https://pyunto.com/media/coach-demo.mp4): a strength-coach persona run with pyunto-agent and Claude Code; it compares each session with the previous one.
 - [Video: a robot answering a diary entry (100 s)](https://pyunto.com/media/solar-demo.mp4): a person writes on the phone; the simulated robot finds sunlight, charges, reports with photos, and turns the house lights on.
 
 ## Getting started
