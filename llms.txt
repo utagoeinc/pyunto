@@ -16,7 +16,7 @@ Pyunto is made by Utagoe Inc. (Japan). The apps are available on iPhone, iPad, M
 ## Two ways to connect an AI
 
 - **Agent (`pyunto-agent run`)**: runs in the background and replies in the thread. Use it to run a service that reaches people in an app they already have, such as a coach, tutor, clinic follow-up, or property desk. The character is a Markdown persona file the operator controls. One process can serve every diary it has been invited into.
-- **MCP (`pyunto-agent mcp`)**: an MCP server for Claude Code or Claude Desktop. It lets one person search, summarize and write their own diary from the desktop. It has 12 tools: whoami, list_spaces, list_members, list_threads, read_thread, wait_for_message, post_entry, react, post_sticker, post_list_item, quick_list_stats, join_space.
+- **MCP (`pyunto-agent mcp`)**: listed in the official MCP Registry as `com.pyunto/diary` (Pyunto Diary); run with `uvx pyunto-agent mcp`, e.g. `claude mcp add pyunto-diary -- uvx pyunto-agent mcp`. A `pair` tool shows the pairing QR code inside the client, and `read_attachment` opens photos, videos and documents. an MCP server for Claude Code or Claude Desktop. It lets one person search, summarize and write their own diary from the desktop. It has 12 tools: whoami, list_spaces, list_members, list_threads, read_thread, wait_for_message, post_entry, react, post_sticker, post_list_item, quick_list_stats, join_space.
 
 ## Robots
 

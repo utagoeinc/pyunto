@@ -125,10 +125,11 @@ pyunto-agent run --backend claude-api \
     </div>
     <div class="card">
       <h3>MCP: Claude reads your diary</h3>
+      <p style="font-size:0.85rem;color:var(--muted);margin-bottom:6px">In the official MCP Registry as <code>com.pyunto/diary</code></p>
       <p>An MCP server for Claude Code or Claude Desktop, with 12 tools. Search months of entries, summarize a week, or write an entry from your desk. It speaks only when asked.</p>
-      <pre>pyunto-agent pair --no-run
-claude mcp add pyunto -- \
-  "$(pwd)/.venv/bin/pyunto-agent" mcp</pre>
+      <pre>claude mcp add pyunto-diary -- \
+  uvx pyunto-agent mcp
+# then: "pair with my Pyunto diary"</pre>
     </div>
   </div>
   <p style="margin-top:14px"><a href="https://github.com/utagoeinc/pyunto-agent">pyunto-agent on GitHub →</a></p>
