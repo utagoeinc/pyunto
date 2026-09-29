@@ -131,6 +131,8 @@ claude mcp add pyunto -- \
   <h2>Robots</h2>
   <p>Write <i>"go and find some sunlight, and bring back power"</i> in plain words. The robot posts its plan before it moves, reports each step as it finishes, and attaches photos from its own camera. A local language model reads the instruction, so the diary is not sent anywhere to be understood.</p>
   <p>To connect your own machine, you write one class with one method. The SDK handles the encrypted transport, pairing and replies. Six simulated robots ship with it.</p>
+  <pre>pip install 'pyunto-robotics[llm]'
+pyunto-robotics showqr</pre>
   <pre>class MyRobot:
     def run(self, action, argument=None, where=None, expect=None) -> SkillResult: ...</pre>
   <p><a href="https://github.com/utagoeinc/pyunto-robotics">pyunto-robotics on GitHub →</a></p>
