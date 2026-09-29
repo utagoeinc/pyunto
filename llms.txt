@@ -26,6 +26,10 @@ Pyunto is made by Utagoe Inc. (Japan). The apps are available on iPhone, iPad, M
 - Six simulated robots ship with the package (MuJoCo): solar, watch (sensor-only home monitoring, no indoor cameras), pet, mars, orchard, hotel.
 - It runs on Linux, Windows and macOS (Apple silicon); tests run on all three in CI. Windows on ARM needs the x64 build of Python. A URDF can be loaded directly (MuJoCo reads URDF).
 
+## Demo
+
+- [Video: a robot answering a diary entry (100 s)](https://pyunto.com/media/solar-demo.mp4): a person writes on the phone; the simulated robot finds sunlight, charges, reports with photos, and turns the house lights on.
+
 ## Getting started
 
 - [pyunto-agent](https://github.com/utagoeinc/pyunto-agent): Python package with the agent, MCP server, pairing and encrypted transport. Apache-2.0. Install: `pip install 'pyunto-agent[qr]'` ([PyPI](https://pypi.org/project/pyunto-agent/)).

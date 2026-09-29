@@ -129,6 +129,10 @@ claude mcp add pyunto -- \
   <p style="margin-top:14px"><a href="https://github.com/utagoeinc/pyunto-agent">pyunto-agent on GitHub →</a></p>
 
   <h2>Robots</h2>
+  <video controls muted playsinline preload="metadata" poster="/media/solar-demo-poster.jpg" style="width:100%;border-radius:12px;border:1px solid var(--line);margin:0 0 14px">
+    <source src="/media/solar-demo.mp4" type="video/mp4">
+  </video>
+  <p class="caption" style="margin-bottom:18px">A real run: a person writes in the diary on the phone, and the robot finds sunlight, charges, reports with photos, and turns the house lights on. Sped up where it drives.</p>
   <p>Write <i>"go and find some sunlight, and bring back power"</i> in plain words. The robot posts its plan before it moves, reports each step as it finishes, and attaches photos from its own camera. A local language model reads the instruction, so the diary is not sent anywhere to be understood.</p>
   <p>To connect your own machine, you write one class with one method. The SDK handles the encrypted transport, pairing and replies. Six simulated robots ship with it.</p>
   <pre>pip install 'pyunto-robotics[llm]'
