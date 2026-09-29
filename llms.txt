@@ -21,10 +21,10 @@ Pyunto is made by Utagoe Inc. (Japan). The apps are available on iPhone, iPad, M
 ## Robots
 
 - `pyunto-robotics` connects any robot to a diary. The integration contract is one class with one method, `run(action, argument, where, expect) -> SkillResult`. It works for real hardware, another simulator, or a robot that is only an HTTP API.
-- A local language model on the robot's computer interprets plain-language instructions. Command mode offers a closed vocabulary instead.
+- A language model interprets plain-language instructions: Gemma 4 in-process on Apple silicon, any OpenAI-compatible local server (Ollama, llama.cpp, LM Studio, vLLM) on Linux and Windows, or the Claude API. Command mode offers a closed vocabulary instead.
 - The robot posts its plan before moving, reports each step as it finishes, and attaches photos from its own camera.
 - Six simulated robots ship with the package (MuJoCo): solar, watch (sensor-only home monitoring, no indoor cameras), pet, mars, orchard, hotel.
-- It needs macOS on Apple silicon; Windows and Linux are not verified yet.
+- It runs on Linux, Windows and macOS (Apple silicon); tests run on all three in CI. Windows on ARM needs the x64 build of Python. A URDF can be loaded directly (MuJoCo reads URDF).
 
 ## Getting started
 
